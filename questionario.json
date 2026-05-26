@@ -1,0 +1,277 @@
+{
+  "start_node": "inicio",
+  "invalid_option_message": "Não entendi sua resposta. Por favor, responda apenas com o número de uma das opções.",
+  "handoff_message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento.",
+  "nodes": {
+    "inicio": {
+      "type": "question",
+      "field": "menu_principal",
+      "message": "Olá! Aqui é Flávio da DOC.\n\nObrigado pelo seu contato.\n\nPara darmos sequência, escolha uma das opções abaixo.\nDigite o número correspondente à opção desejada:\n\n1 - Informações sobre a empresa\n2 - Informações sobre serviços\n3 - RH\n4 - Fornecedor",
+      "options": {
+        "1": {
+          "label": "Informações sobre a empresa",
+          "next": "info_empresa"
+        },
+        "2": {
+          "label": "Informações sobre serviços",
+          "next": "servicos"
+        },
+        "3": {
+          "label": "RH",
+          "next": "rh"
+        },
+        "4": {
+          "label": "Fornecedor",
+          "next": "fornecedor"
+        }
+      }
+    },
+    "info_empresa": {
+      "type": "question",
+      "field": "info_empresa_voltar",
+      "message": "A DOC é uma empresa especializada em documentação técnica para eventos, atuando principalmente na liberação e regularização de stands junto às organizadoras, pavilhões, promotoras de eventos, hotéis, shows e órgãos responsáveis.\n\nDigite:\n\n1 - Voltar ao menu inicial",
+      "options": {
+        "1": {
+          "label": "Voltar ao menu inicial",
+          "next": "inicio"
+        }
+      }
+    },
+    "servicos": {
+      "type": "question",
+      "field": "tipo_servico",
+      "message": "Digite o número correspondente à opção desejada:\n\n1 - Documentação técnica\n2 - Seguro\n3 - Curso de NR\n4 - Anti-chamas\n5 - Alvará e licenciamento para evento\n6 - Voltar para o menu inicial",
+      "options": {
+        "1": {
+          "label": "Documentação técnica",
+          "next": "documentacao_tecnica"
+        },
+        "2": {
+          "label": "Seguro",
+          "next": "seguro_atividade"
+        },
+        "3": {
+          "label": "Curso de NR",
+          "next": "curso_nr"
+        },
+        "4": {
+          "label": "Anti-chamas",
+          "next": "handoff_comercial_antichamas"
+        },
+        "5": {
+          "label": "Alvará e licenciamento para evento",
+          "next": "handoff_comercial_alvara"
+        },
+        "6": {
+          "label": "Voltar para o menu inicial",
+          "next": "inicio"
+        }
+      }
+    },
+    "documentacao_tecnica": {
+      "type": "question",
+      "field": "tipo_documentacao_tecnica",
+      "message": "Documentação técnica.\n\nDigite o número correspondente à opção desejada:\n\n1 - Cálculo estrutural para ponto aéreo\n2 - Cálculo estrutural de mezanino\n3 - Matriz de risco\n4 - RRTs: projeto, execução e elétrica\n5 - Cálculo de estaiamento\n6 - Cálculo do vento\n7 - Laudo estrutural\n8 - Voltar para informações sobre serviços",
+      "options": {
+        "1": {
+          "label": "Cálculo estrutural para ponto aéreo",
+          "next": "handoff_documentacao_ponto_aereo"
+        },
+        "2": {
+          "label": "Cálculo estrutural de mezanino",
+          "next": "handoff_documentacao_mezanino"
+        },
+        "3": {
+          "label": "Matriz de risco",
+          "next": "handoff_documentacao_matriz_risco"
+        },
+        "4": {
+          "label": "RRTs: projeto, execução e elétrica",
+          "next": "handoff_documentacao_rrt"
+        },
+        "5": {
+          "label": "Cálculo de estaiamento",
+          "next": "handoff_documentacao_estaiamento"
+        },
+        "6": {
+          "label": "Cálculo do vento",
+          "next": "handoff_documentacao_vento"
+        },
+        "7": {
+          "label": "Laudo estrutural",
+          "next": "handoff_documentacao_laudo"
+        },
+        "8": {
+          "label": "Voltar para informações sobre serviços",
+          "next": "servicos"
+        }
+      }
+    },
+    "seguro_atividade": {
+      "type": "question",
+      "field": "atividade_seguro",
+      "message": "Seguro.\n\nDigite o número correspondente à sua atividade:\n\n1 - Cliente final\n2 - Agência de marketing/eventos\n3 - Montadora\n4 - Fornecedor\n5 - Voltar para informações sobre serviços",
+      "options": {
+        "1": {
+          "label": "Cliente final",
+          "next": "handoff_corretor_cliente_final"
+        },
+        "2": {
+          "label": "Agência de marketing/eventos",
+          "next": "handoff_corretor_agencia"
+        },
+        "3": {
+          "label": "Montadora",
+          "next": "handoff_corretor_montadora"
+        },
+        "4": {
+          "label": "Fornecedor",
+          "next": "handoff_corretor_fornecedor"
+        },
+        "5": {
+          "label": "Voltar para informações sobre serviços",
+          "next": "servicos"
+        }
+      }
+    },
+    "curso_nr": {
+      "type": "question",
+      "field": "tipo_nr",
+      "message": "Curso de NR.\n\nDigite o número correspondente à NR desejada:\n\n1 - NR 35\n2 - NR 18\n3 - NR 12\n4 - NR 10\n5 - Voltar para informações sobre serviços",
+      "options": {
+        "1": {
+          "label": "NR 35",
+          "next": "handoff_comercial_nr35"
+        },
+        "2": {
+          "label": "NR 18",
+          "next": "handoff_comercial_nr18"
+        },
+        "3": {
+          "label": "NR 12",
+          "next": "handoff_comercial_nr12"
+        },
+        "4": {
+          "label": "NR 10",
+          "next": "handoff_comercial_nr10"
+        },
+        "5": {
+          "label": "Voltar para informações sobre serviços",
+          "next": "servicos"
+        }
+      }
+    },
+    "rh": {
+      "type": "end",
+      "status": "completed",
+      "message": "Olá, tudo bem?\n\nAgradecemos seu contato e interesse em trabalhar conosco.\n\nA DOC para Eventos atua exclusivamente na área de documentação técnica e regularização para eventos, stands e estruturas temporárias. Por esse motivo, não realizamos contratação de mão de obra operacional, como montagem, elétrica, cenografia, produção, ajudantes, entre outros.\n\nEssas oportunidades normalmente são disponibilizadas diretamente por montadoras de stands, agências, produtoras de eventos e empresas responsáveis pela execução dos projetos.\n\nAgradecemos novamente pelo contato e desejamos sucesso em sua trajetória profissional.\n\nAtenciosamente,\nRH | DOC para Eventos"
+    },
+    "fornecedor": {
+      "type": "end",
+      "status": "completed",
+      "message": "Agradecemos pelo seu contato e interesse em apresentar seus serviços à DOC para Eventos.\n\nInformamos que nossa empresa atua exclusivamente na área de documentação técnica e não realizamos contratação ou intermediação de mão de obra operacional, montagem ou serviços de produção.\n\nNormalmente, as contratações desse segmento são realizadas diretamente por montadoras de stands, agências de marketing, promotores de eventos e empresas responsáveis pela execução do projeto.\n\nDe qualquer forma, agradecemos a apresentação e desejamos muito sucesso em seus trabalhos.\n\nAtenciosamente,\nEquipe DOC para Eventos"
+    },
+    "handoff_documentacao_ponto_aereo": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "documentacao_tecnica",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_documentacao_mezanino": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "documentacao_tecnica",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_documentacao_matriz_risco": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "documentacao_tecnica",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_documentacao_rrt": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "documentacao_tecnica",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_documentacao_estaiamento": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "documentacao_tecnica",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_documentacao_vento": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "documentacao_tecnica",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_documentacao_laudo": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "documentacao_tecnica",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_corretor_cliente_final": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "corretor_seguro",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_corretor_agencia": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "corretor_seguro",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_corretor_montadora": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "corretor_seguro",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_corretor_fornecedor": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "corretor_seguro",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_comercial_nr35": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "comercial_curso_nr",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_comercial_nr18": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "comercial_curso_nr",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_comercial_nr12": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "comercial_curso_nr",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_comercial_nr10": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "comercial_curso_nr",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_comercial_antichamas": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "comercial_antichamas",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    },
+    "handoff_comercial_alvara": {
+      "type": "handoff",
+      "status": "handoff",
+      "department": "comercial_alvara_licenciamento",
+      "message": "Aguarde um momento, por favor. Um responsável dará continuidade ao seu atendimento."
+    }
+  }
+}
