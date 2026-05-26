@@ -47,7 +47,7 @@ def phone_lookup_candidates(phone: str | None) -> list[str]:
         elif len(national_number) == 10:
             ddd = national_number[:2]
             subscriber = national_number[2:]
-            if subscriber.startswith("9"):
+            if subscriber[:1] in {"6", "7", "8", "9"}:
                 add(f"55{ddd}9{subscriber}")
 
     return candidates
